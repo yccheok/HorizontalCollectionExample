@@ -15,37 +15,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="325"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lo-Yt-9JQ">
-                        <rect key="frame" x="10" y="34.5" width="330" height="325"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vI-J6-pDt">
-                                <rect key="frame" x="0.0" y="0.0" width="311" height="325"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="square.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-tS-A12">
-                                <rect key="frame" x="311" y="0.0" width="19" height="325"/>
-                            </imageView>
-                        </subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vI-J6-pDt">
+                        <rect key="frame" x="19" y="0.0" width="311" height="325"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="bRM-4M-eaS"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="9fc-qH-owm"/>
                         </constraints>
-                    </stackView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="square.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-tS-A12">
+                        <rect key="frame" x="10" y="0.0" width="330" height="325"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="QPB-js-v3a"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="0Lo-Yt-9JQ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="JRm-w5-5YK"/>
-                <constraint firstAttribute="trailing" secondItem="0Lo-Yt-9JQ" secondAttribute="trailing" constant="10" id="Pp9-bi-G8a"/>
-                <constraint firstItem="0Lo-Yt-9JQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="RWr-pa-4OK"/>
-                <constraint firstItem="0Lo-Yt-9JQ" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="Z8q-tc-c9p"/>
+                <constraint firstItem="YQF-tS-A12" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="732-5d-qir"/>
+                <constraint firstItem="8vI-J6-pDt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hRQ-MM-GCd"/>
+                <constraint firstAttribute="trailing" secondItem="8vI-J6-pDt" secondAttribute="trailing" constant="8" id="hcY-RQ-ypA"/>
+                <constraint firstItem="8vI-J6-pDt" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="hnM-QZ-iay"/>
+                <constraint firstItem="8vI-J6-pDt" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="kOK-g6-qG4"/>
+                <constraint firstItem="YQF-tS-A12" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pZB-1H-2hY"/>
+                <constraint firstAttribute="trailing" secondItem="YQF-tS-A12" secondAttribute="trailing" id="wnt-vg-hFH"/>
+                <constraint firstItem="YQF-tS-A12" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yl6-Sn-CfA"/>
             </constraints>
             <size key="customSize" width="350" height="325"/>
             <connections>
                 <outlet property="imageView" destination="YQF-tS-A12" id="6uz-Hv-khr"/>
-                <outlet property="leadingLayoutConstrait" destination="RWr-pa-4OK" id="Kil-Kr-Wbf"/>
                 <outlet property="mainLabel" destination="8vI-J6-pDt" id="CH7-PN-JAb"/>
-                <outlet property="trailingLayoutConstraint" destination="Pp9-bi-G8a" id="uwF-YE-FS7"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="139.62053571428569"/>
         </collectionViewCell>
