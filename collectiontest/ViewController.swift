@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let labels = ["sm" , "big", "bigger", "even bigger", "much much bigger", "very very very large"]
+    let labels = ["sm" , "big", "bigger", "even bigger", "much much bigger", "very very very large",
+                  "sm" , "big", "bigger", "even bigger", "much much bigger", "very very very large"]
     let colors: [UIColor] = [.green, .red, .orange, .blue, .purple, .lightGray, .cyan]
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,7 +34,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: labelcell.reuseIdentifier, for: indexPath) as! labelcell
         cell.mainLabel.text = labels[indexPath.row]
-        cell.backgroundColor = colors[indexPath.row]
+        cell.backgroundColor = colors[indexPath.row % colors.count]
+        
+        if (indexPath.row == labels.count-1) {
+            cell.debug(showImage: true)
+        } else {
+            cell.debug(showImage: false)
+        }
         return cell
     }
     
@@ -41,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(44), heightDimension: .fractionalHeight(1))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(44), heightDimension: .absolute(50))
+            let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(44), heightDimension: .absolute(44))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             let section = NSCollectionLayoutSection(group: group)
             section.orthogonalScrollingBehavior = .continuous
