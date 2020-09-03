@@ -20,6 +20,18 @@ class labelcell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // set the mask in layoutSubviews
+        let maskPath = UIBezierPath(roundedRect: bounds,
+                                    byRoundingCorners: [.topLeft, .topRight],
+                                    cornerRadii: CGSize(width: 12.0, height: 12.0))
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        layer.mask = shape
+    }
+    
     func debug(showImage: Bool) {
         if showImage {
             mainLabel.isHidden = true

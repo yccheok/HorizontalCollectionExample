@@ -29,7 +29,7 @@
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="kEd-Ih-mhp"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="bRM-4M-eaS"/>
                         </constraints>
                     </stackView>
                 </subviews>
